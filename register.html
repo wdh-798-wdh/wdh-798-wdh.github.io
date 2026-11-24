@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="注册山城游食录，收藏重庆景点与美食、加入独立论坛、留下评价，建立你的山城旅行笔记。">
+  <meta name="theme-color" content="#173f35">
+  <title>注册 · 山城游食录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body data-page="register" data-nav="register">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div data-site-header></div>
+
+  <main id="main" class="page auth-page">
+    <div class="container">
+      <div class="auth-shell">
+        <aside class="auth-aside">
+          <img src="assets/images/site/erchang-2.jpg" alt="鹅岭二厂的文艺街角">
+          <div class="auth-aside-content">
+            <div class="auth-aside-top">
+              <span class="auth-brand">
+                <span class="brand-mark">
+                  <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <circle cx="21.5" cy="9.5" r="3.1" fill="currentColor" opacity=".82"/>
+                    <path d="M3.6 25.6 12.2 10l5 8.1 3.1-4.8 8.1 12.3H3.6Z" fill="currentColor" opacity=".94"/>
+                    <path d="M5 27.2c5.2-2.2 16.2-2.2 21.8 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".45"/>
+                  </svg>
+                </span>
+                <span class="brand-type"><span class="brand-name">山城游食录</span><span class="brand-en">SHANCHENG FIELD NOTES</span></span>
+              </span>
+              <span class="auth-aside-coordinates">29°33′N · 106°34′E</span>
+            </div>
+            <div class="auth-quote">
+              <p class="eyebrow">A new page for you</p>
+              <h2>从今天起，<br>山城有你的一页。</h2>
+              <p>把想去的坡坎、想吃的店和还没来得及说出口的旅行故事，都放进这本属于自己的山城笔记。</p>
+            </div>
+            <div class="auth-aside-foot">
+              <div class="auth-aside-stats">
+                <div class="auth-aside-stat"><strong>12</strong><span>精选景点</span></div>
+                <div class="auth-aside-stat"><strong>12</strong><span>山城味道</span></div>
+                <div class="auth-aside-stat"><strong>1</strong><span>属于你的册子</span></div>
+              </div>
+              <span class="auth-aside-seal">新旅人<br>入山城</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="auth-panel">
+          <div class="auth-card">
+            <div id="auth-member-state"></div>
+            <div id="auth-form-shell">
+              <p class="eyebrow">Join the table · 入席</p>
+              <h1>第一次来？<br>先报个山城名号。</h1>
+              <p class="auth-subtitle">注册后可以收藏景点与味道、加入论坛、留下评价。账号只需要一个名字和密码，不需要真实身份。</p>
+              <div class="auth-tabs">
+                <a class="auth-tab" href="login.html?next=index.html">登录</a>
+                <span class="auth-tab is-active">注册</span>
+              </div>
+              <div class="auth-alert" data-auth-alert><svg class="ico"><use href="#i-info"></use></svg><span></span></div>
+              <form id="register-form" novalidate>
+                <div class="form-field" data-field="name">
+                  <label for="register-name">你的名号 <small>在山城论坛里会显示</small></label>
+                  <div class="auth-input-wrap"><svg class="ico"><use href="#i-user"></use></svg><input id="register-name" name="name" type="text" maxlength="16" autocomplete="nickname" placeholder="例如：雾都小旅人"></div>
+                  <small class="field-error" data-error-for="name"></small>
+                </div>
+                <div class="form-field" data-field="email">
+                  <label for="register-email">邮箱 <small>用来登录</small></label>
+                  <div class="auth-input-wrap"><svg class="ico"><use href="#i-mail"></use></svg><input id="register-email" name="email" type="email" autocomplete="email" placeholder="your@email.com"></div>
+                  <small class="field-error" data-error-for="email"></small>
+                </div>
+                <div class="form-field" data-field="password">
+                  <label for="register-password">设置密码 <small>至少 6 位</small></label>
+                  <div class="auth-input-wrap">
+                    <svg class="ico"><use href="#i-lock"></use></svg>
+                    <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="用一个只有你知道的密码">
+                    <button class="pass-toggle" type="button" data-toggle-password aria-label="显示密码"><svg class="ico"><use href="#i-eye"></use></svg></button>
+                  </div>
+                  <div class="password-strength" data-strength="0">
+                    <div class="password-strength-bars"><span></span><span></span><span></span><span></span></div>
+                    <span class="password-strength-label">密码强度：还没开始</span>
+                  </div>
+                  <small class="field-error" data-error-for="password"></small>
+                </div>
+                <div class="form-field" data-field="confirm">
+                  <label for="register-confirm">再输入一次 <small>确认没有手滑</small></label>
+                  <div class="auth-input-wrap">
+                    <svg class="ico"><use href="#i-lock"></use></svg>
+                    <input id="register-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="再输一次密码">
+                    <button class="pass-toggle" type="button" data-toggle-password aria-label="显示密码"><svg class="ico"><use href="#i-eye"></use></svg></button>
+                  </div>
+                  <small class="field-error" data-error-for="confirm"></small>
+                </div>
+                <div class="form-between" style="align-items:flex-start">
+                  <label class="checkbox" style="align-items:flex-start;line-height:1.6"><input type="checkbox" name="terms" id="register-terms"> 我愿意遵守山城旅人公约，友善、真实、不打扰本地生活。</label>
+                </div>
+                <small class="field-error" data-error-for="terms" style="margin-top:4px"></small>
+                <button class="btn auth-submit" type="submit" data-submit-label="注册成为山城旅人">注册成为山城旅人 <svg class="ico"><use href="#i-arrow-right"></use></svg></button>
+              </form>
+              <p class="auth-foot">已经有账号？ <a href="login.html?next=index.html">直接登录</a></p>
+              <p class="auth-note"><svg class="ico"><use href="#i-lock"></use></svg>演示站点：账号信息仅保存在本机浏览器，不收集真实身份信息。</p>
+              <div class="auth-terms">注册即表示你同意 <button type="button" data-open-terms>《山城旅人公约》</button> 与 <button type="button" data-open-terms>《隐私说明》</button>。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

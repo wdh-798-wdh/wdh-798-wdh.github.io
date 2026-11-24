@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="重庆智能路线规划：输入想去的景点和美食，选择时长、节奏与偏好，自动生成三条不同性格的山城路线，并支持收藏与复制行程。">
+  <meta name="theme-color" content="#173f35">
+  <title>智能路线 · 山城替你指路 | 山城游食录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/routes.css">
+</head>
+<body data-page="routes" data-nav="routes">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div data-site-header></div>
+
+  <main id="main" class="page route-page">
+    <section class="route-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="面包屑"><a href="index.html">首页</a><svg class="ico"><use href="#i-chevron-right"></use></svg><span class="current">智能路线</span></nav>
+        <div class="route-hero-grid">
+          <div>
+            <p class="eyebrow is-light">Route atelier · 山城路线工坊</p>
+            <h1>告诉我你想去哪，<br>剩下的路，<br><em>交给山城。</em></h1>
+            <p class="lede">不用再复制别人的行程。输入你想去的地方，选好时长、节奏和今天的旅行性格，我们为你排出三条不绕路、也不无聊的山城路线。</p>
+            <div class="route-hero-points">
+              <span><b>01</b>输入目的地</span>
+              <span><b>02</b>选一个节奏</span>
+              <span><b>03</b>从三条路线里挑</span>
+            </div>
+          </div>
+          <div class="route-art" aria-hidden="true">
+            <svg class="route-art-svg" viewBox="0 0 420 310" fill="none">
+              <path d="M30 253c44-24 72-11 102-40 27-27 16-51 43-79 29-31 56-17 84-45 19-19 19-46 43-65 22-18 58-20 89-6" stroke="rgba(255,253,248,.16)" stroke-width="1.3"/>
+              <path d="M26 275c54-19 80-57 62-95-19-41-27-45 1-75 28-29 56-13 79-35 18-17 15-34 37-47 29-18 54-6 90-19 29-11 48-27 87-20" stroke="rgba(255,253,248,.09)" stroke-width="1"/>
+              <path d="M42 197c48-18 69 2 104-24 37-28 31-54 63-61 35-8 47 24 84 2 22-13 37-33 75-35" stroke="rgba(255,253,248,.07)" stroke-width="1"/>
+              <path d="M53 134c21 11 41 37 33 57-8 21-37 25-35 51 2 21 22 24 31 43" stroke="rgba(191,151,87,.32)" stroke-width="1.4" stroke-dasharray="4 7"/>
+              <circle cx="89" cy="240" r="6" stroke="#bf9757" stroke-width="1.8" fill="#173f35"/>
+              <circle cx="168" cy="173" r="6" stroke="#bf9757" stroke-width="1.8" fill="#173f35"/>
+              <circle cx="259" cy="124" r="6" stroke="#bf9757" stroke-width="1.8" fill="#173f35"/>
+              <circle cx="333" cy="68" r="7" fill="#c7502e"/>
+              <path d="M89 240c29-27 42-26 79-67 26-29 47-3 91-49 22-23 34-43 67-49" stroke="#bf9757" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 6"/>
+            </svg>
+            <span class="route-art-tag" style="left:2%;top:30%">NIGHT WALK · 19:30</span>
+            <span class="route-art-tag" style="left:31%;bottom:9%">FROM 南山 TO 洪崖洞</span>
+            <span class="route-art-tag" style="right:2%;bottom:18%">3 ROUTES · 1 CITY</span>
+            <div class="route-art-note"><strong>山城的路，<br>从来不只一条。</strong>同一个下午，可以是江风、坡坎，也可以是一碗面。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="planner-section">
+      <div class="container">
+        <form class="planner-panel reveal" id="route-form" data-route-form>
+          <div class="planner-head">
+            <div>
+              <p class="eyebrow is-plain">Build your route · 01</p>
+              <h2>先说说，你这次想去哪里？</h2>
+            </div>
+            <span><svg class="ico"><use href="#i-compass"></use></svg>最多选 6 个必去地点</span>
+          </div>
+
+          <div class="planner-dest-row">
+            <div class="planner-field">
+              <label for="destination-input"><svg class="ico"><use href="#i-map-pin"></use></svg>想去的地方 <small>输入或从下方快速添加</small></label>
+              <div class="tag-input-wrap">
+                <div class="tag-input" id="tag-input">
+                  <input id="destination-input" type="text" placeholder="试试输入：洪崖洞、火锅、南山…" autocomplete="off" aria-label="输入想去的地方">
+                </div>
+                <div class="tag-suggest" id="tag-suggest" aria-live="polite"></div>
+              </div>
+              <div class="quick-picks" id="quick-picks"><span>快速添加</span></div>
+            </div>
+            <div class="planner-field planner-duration">
+              <label><svg class="ico"><use href="#i-clock"></use></svg>玩多久</label>
+              <div class="segmented">
+                <label><input type="radio" name="duration" value="half">半日</label>
+                <label><input type="radio" name="duration" value="1" checked>一日</label>
+                <label><input type="radio" name="duration" value="2">两日</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="planner-mid">
+            <div class="planner-field">
+              <label><svg class="ico"><use href="#i-compass"></use></svg>从哪里出发</label>
+              <label class="control-select">
+                <span class="sr-only">出发地点</span>
+                <select id="start-point" name="start">
+                  <option value="jiefangbei">解放碑 · 渝中</option>
+                  <option value="chongqingbei">重庆北站</option>
+                  <option value="airport">江北国际机场</option>
+                  <option value="shapingba">沙坪坝站</option>
+                </select>
+              </label>
+            </div>
+            <div class="planner-field">
+              <label><svg class="ico"><use href="#i-route"></use></svg>行程节奏</label>
+              <div class="segmented">
+                <label><input type="radio" name="pace" value="轻松">轻松</label>
+                <label><input type="radio" name="pace" value="适中" checked>适中</label>
+                <label><input type="radio" name="pace" value="暴走">暴走</label>
+              </div>
+            </div>
+            <div class="planner-field">
+              <label><svg class="ico"><use href="#i-train"></use></svg>怎么移动</label>
+              <div class="segmented">
+                <label><input type="radio" name="transport" value="公共交通" checked>轨道交通</label>
+                <label><input type="radio" name="transport" value="少走路">少走路</label>
+                <label><input type="radio" name="transport" value="打车">打车</label>
+              </div>
+            </div>
+            <div class="planner-field">
+              <label><svg class="ico"><use href="#i-sparkles"></use></svg>路线性格 <small>单选</small></label>
+              <div class="segmented" style="height:46px;padding:4px">
+                <label><input type="radio" name="routeStyle" value="all" checked>综合</label>
+                <label><input type="radio" name="routeStyle" value="night">夜景</label>
+                <label><input type="radio" name="routeStyle" value="food">烟火</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="planner-interests">
+            <span>Today's mood</span>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="夜景"><span>追一场夜景</span></label>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="美食"><span>把胃交给山城</span></label>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="出片"><span>想拍好看的照片</span></label>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="人文"><span>人文与历史</span></label>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="自然"><span>山野与自然</span></label>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="亲子"><span>带娃同行</span></label>
+            <label class="interest-chip"><input type="checkbox" name="interest" value="慢游"><span>慢慢逛</span></label>
+          </div>
+
+          <div class="planner-foot">
+            <p class="planner-foot-note"><svg class="ico"><use href="#i-info"></use></svg>路线为旅行灵感参考，出发前请核对景区开放时间与交通。</p>
+            <div class="planner-submit">
+              <span class="count"><strong data-selected-count>0</strong> / 6 必去</span>
+              <button class="btn btn--rust" type="submit" data-generate>生成我的路线 <svg class="ico"><use href="#i-sparkles"></use></svg></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="route-results-section">
+      <div class="container">
+        <div class="route-results-head">
+          <div>
+            <p class="eyebrow is-plain">Three ways to wander · 02</p>
+            <h2 id="results-title">先看看，山城替你拟的三条路</h2>
+            <p id="results-subtitle">选一条合心意的，再往下翻完整行程。</p>
+          </div>
+          <div class="route-results-actions">
+            <button class="btn btn--ghost" type="button" data-regenerate><svg class="ico"><use href="#i-refresh"></use></svg> 换一组灵感</button>
+          </div>
+        </div>
+        <div class="route-options-grid" id="route-results" aria-live="polite">
+          <div class="route-loading"><span class="spinner"></span><p>正在读取山城地形…</p><span>PLOTTING A ROUTE THROUGH THE MOUNTAIN CITY</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="selected-route-section">
+      <div class="container" id="selected-route"></div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/routes.js"></script>
+</body>
+</html>

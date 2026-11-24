@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="重庆美食口味测试：8 个关于味道的问题，测出你的山城味觉人格，并获得专属美食推荐。">
+  <meta name="theme-color" content="#173f35">
+  <title>口味测试 · 你的舌头比攻略更懂重庆 | 山城游食录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/taste.css">
+</head>
+<body data-page="taste" data-nav="taste">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div data-site-header></div>
+
+  <main id="main" class="page taste-page">
+    <section class="taste-intro" id="taste-intro">
+      <div class="container">
+        <div class="taste-intro-grid">
+          <div class="taste-intro-copy reveal">
+            <nav class="breadcrumb" aria-label="面包屑"><a href="index.html">首页</a><svg class="ico"><use href="#i-chevron-right"></use></svg><span class="current">口味测试</span></nav>
+            <p class="eyebrow">Taste profile · 山城味觉档案</p>
+            <h1>你的舌头，<br>比攻略更懂<em>重庆。</em></h1>
+            <p class="lede">八个关于吃的小问题，不用选“正确答案”。测出你的山城味觉人格，再让味道带你走一条只属于你的重庆路线。</p>
+            <div class="taste-badges">
+              <span>8 个问题</span>
+              <span>约 2 分钟</span>
+              <span>6 种味觉人格</span>
+              <span>专属美食推荐</span>
+            </div>
+            <div class="taste-start-actions">
+              <button class="btn btn--rust" type="button" data-start-quiz>开始味觉测试 <svg class="ico"><use href="#i-arrow-right"></use></svg></button>
+              <button class="btn btn--ghost" type="button" data-view-result hidden>查看上次结果 <svg class="ico"><use href="#i-refresh"></use></svg></button>
+            </div>
+            <p class="taste-disclaimer">测试结果会保存在本机浏览器 · 不收集任何个人信息</p>
+          </div>
+          <div class="taste-hero-visual reveal reveal-delay-1">
+            <img src="assets/images/site/food-hero.jpg" alt="重庆九宫格火锅" fetchpriority="high">
+            <div class="taste-hero-overlay">
+              <span class="taste-wheel-mini" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+              </span>
+              <div class="taste-hero-card">
+                <span class="kicker">FIND YOUR FLAVOR</span>
+                <strong>辣、麻、鲜、甜、酸、糯</strong>
+                <p>你的答案，会决定那一口重庆从哪里开始。</p>
+              </div>
+              <span class="taste-float-note">辣不是唯一答案</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="taste-method reveal">
+          <div class="taste-method-step">
+            <span>01</span>
+            <div><strong>诚实作答</strong><p>没有标准答案，选你真正会伸筷子的那一道。</p></div>
+          </div>
+          <div class="taste-method-step">
+            <span>02</span>
+            <div><strong>得到味觉人格</strong><p>从麻、辣、酸、甜、鲜、糯六个维度，看见自己的口味形状。</p></div>
+          </div>
+          <div class="taste-method-step">
+            <span>03</span>
+            <div><strong>带走一张菜单</strong><p>匹配三道最适合你的山城味道，也可以直接生成一条寻味路线。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz-section" hidden>
+      <div class="container">
+        <div class="quiz-head">
+          <div class="quiz-progress-meta">
+            <span class="eyebrow is-plain">Tasting notes</span>
+            <span><strong data-question-current>01</strong> / 08</span>
+          </div>
+          <div class="quiz-progress-track"><span data-quiz-progress></span></div>
+          <div class="quiz-dots" id="quiz-dots" aria-hidden="true"></div>
+        </div>
+        <div class="quiz-layout">
+          <aside class="quiz-visual">
+            <img id="quiz-image" src="assets/images/site/food-hotpot.jpg" alt="">
+            <div class="quiz-image-overlay">
+              <span class="kicker">SHANCHENG TASTE TEST</span>
+              <p id="quiz-visual-note">先别想正确答案，想想你真正会伸筷子的那一道。</p>
+            </div>
+            <span class="quiz-image-index" id="quiz-image-index">01 / 08</span>
+          </aside>
+          <div class="quiz-panel">
+            <div class="quiz-question-head">
+              <span class="quiz-kicker" id="quiz-kicker">第一口</span>
+              <span class="quiz-question-num" id="quiz-question-num">QUESTION 01</span>
+            </div>
+            <h2 id="quiz-question">火锅局上，你的油碟怎么调？</h2>
+            <p class="quiz-note" id="quiz-note">小小的油碟，藏着你的味觉人格。</p>
+            <div class="quiz-options" id="quiz-options" role="group" aria-label="选择一个答案"></div>
+            <div class="quiz-controls">
+              <button class="quiz-back" type="button" data-quiz-back id="quiz-back" disabled><svg class="ico"><use href="#i-arrow-left"></use></svg>上一题</button>
+              <span>选择一项，自动进入下一题 · 键盘 A–D 可作答</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="analysis-section" id="analysis-section" hidden>
+      <div class="container">
+        <div class="analysis-screen">
+          <div class="analysis-bowl">
+            <span class="analysis-steam steam-1"></span>
+            <span class="analysis-steam steam-2"></span>
+            <span class="analysis-steam steam-3"></span>
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M7 27h50a21 21 0 0 1-21 21H28A21 21 0 0 1 7 27Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+              <path d="M20 20c0-4 4-5 4-9M32 20c0-4 4-5 4-9M44 20c0-4 4-5 4-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+            </svg>
+          </div>
+          <p class="eyebrow is-plain">Reading your taste</p>
+          <h2>正在把你的口味，<br>放上山城的地图。</h2>
+          <p class="analysis-status" data-analysis-status>麻、辣、鲜、香、甜、糯正在排队…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="result-section" id="result-section" hidden>
+      <div id="taste-result"></div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/taste.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="我的山城收藏夹：收藏的重庆景点、美食与智能路线，支持本机保存、一键移除与口味档案回看。">
+  <meta name="theme-color" content="#173f35">
+  <title>我的收藏 · 山城游食录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/favorites.css">
+</head>
+<body data-page="favorites" data-nav="favorites">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div data-site-header></div>
+
+  <main id="main" class="page favorites-page">
+    <section class="favorites-hero">
+      <div class="container">
+        <div class="favorites-hero-grid">
+          <div class="reveal">
+            <nav class="breadcrumb" aria-label="面包屑"><a href="index.html">首页</a><svg class="ico"><use href="#i-chevron-right"></use></svg><span class="current">我的收藏</span></nav>
+            <p class="eyebrow">Your mountain archive · 本机收藏</p>
+            <h1 id="favorites-title">我的<em>山城</em>，<br>都在这一页。</h1>
+            <p class="lede">收藏想去的坡坎、想吃的味道和一条还没来得及走的路线。所有收藏都保存在这台设备的浏览器里，随时可以回来继续翻。</p>
+            <div class="favorites-hero-actions">
+              <a class="btn" href="attractions.html">继续逛山城 <svg class="ico"><use href="#i-arrow-right"></use></svg></a>
+              <a class="btn btn--ghost" href="taste-test.html">更新我的口味 <svg class="ico"><use href="#i-sparkles"></use></svg></a>
+            </div>
+          </div>
+          <aside class="fav-summary reveal reveal-delay-1">
+            <img src="assets/images/site/erchang-2.jpg" alt="" aria-hidden="true">
+            <div class="fav-summary-top">
+              <div>
+                <p class="eyebrow">Field notes · personal</p>
+              </div>
+              <span class="fav-summary-seal">山城<br>私藏</span>
+            </div>
+            <h2><span data-user-greeting>旅人</span>的<br>山城册子</h2>
+            <p>喜欢的就收好，不必一次走完。<br>重庆值得留一点给下次。</p>
+            <div class="fav-summary-stats">
+              <div class="fav-summary-stat"><strong data-stat-attractions>0</strong><span>景点收藏</span></div>
+              <div class="fav-summary-stat"><strong data-stat-foods>0</strong><span>味道收藏</span></div>
+              <div class="fav-summary-stat"><strong data-stat-routes>0</strong><span>路线收藏</span></div>
+            </div>
+            <div class="fav-summary-foot">
+              <svg class="ico"><use href="#i-lock"></use></svg>
+              <span>只保存在本机 · 不上传云端</span>
+              <a href="index.html">继续漫游</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="favorites-body">
+      <div class="container">
+        <div class="fav-toolbar">
+          <div class="fav-tabs" role="group" aria-label="收藏类型">
+            <button class="fav-tab is-active" type="button" data-fav-tab="all">全部 <span class="tab-count" data-count-all>0</span></button>
+            <button class="fav-tab" type="button" data-fav-tab="attraction">景点 <span class="tab-count" data-count-attraction>0</span></button>
+            <button class="fav-tab" type="button" data-fav-tab="food">美食 <span class="tab-count" data-count-food>0</span></button>
+            <button class="fav-tab" type="button" data-fav-tab="route">路线 <span class="tab-count" data-count-route>0</span></button>
+          </div>
+          <div class="fav-toolbar-tools">
+            <span><span data-total-count>0</span> 个收藏</span>
+            <button class="fav-clear" type="button" data-clear-favorites hidden><svg class="ico"><use href="#i-trash"></use></svg>清空收藏</button>
+          </div>
+        </div>
+        <div id="fav-login-banner"></div>
+        <div class="fav-layout">
+          <div class="fav-main" id="favorites-content"></div>
+          <aside class="fav-side">
+            <div id="taste-profile-card"></div>
+            <div class="fav-side-card">
+              <p class="eyebrow">A small reminder</p>
+              <h4>收藏之后，记得出发。</h4>
+              <ul class="fav-tip-list">
+                <li>收藏只存在当前浏览器，换设备不会同步。</li>
+                <li>路线会随时间与商家信息变化，出发前再核对一次。</li>
+                <li>登录后可以在详情页留下评价与论坛回复。</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/favorites.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="重庆美食攻略：火锅、小面、酸辣粉、毛血旺、豆花饭、烤脑花……按辣度、类型筛选，查看人均、推荐店铺与美食专属论坛。">
+  <meta name="theme-color" content="#173f35">
+  <title>寻味 · 山城百味 | 山城游食录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="foods" data-nav="foods">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div data-site-header></div>
+
+  <main id="main" class="page">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero--split">
+          <div class="reveal">
+            <nav class="breadcrumb" aria-label="面包屑"><a href="index.html">首页</a><svg class="ico"><use href="#i-chevron-right"></use></svg><span class="current">寻味</span></nav>
+            <p class="eyebrow">02 · Flavors / 山城寻味</p>
+            <h1>山城百味，<br>先吃哪<em>一口？</em></h1>
+            <p class="lede">重庆人对吃的认真，藏在清晨的小面、深夜的火锅和一碟豆花蘸水里。这里不只有“辣”，还有酸、麻、鲜、甜与软糯。</p>
+            <div class="page-hero-meta">
+              <span><svg class="ico"><use href="#i-utensils"></use></svg>12 道风味档案</span>
+              <span><svg class="ico"><use href="#i-message"></use></svg>每道菜都有独立论坛</span>
+              <span><svg class="ico"><use href="#i-flame"></use></svg>辣度 1–5 级标注</span>
+            </div>
+            <div class="spice-guide">
+              <span>从微辣到爆辣</span>
+              <span class="spice-meter"><svg class="ico is-on"><use href="#i-flame"></use></svg><svg class="ico is-on"><use href="#i-flame"></use></svg><svg class="ico is-on"><use href="#i-flame"></use></svg><svg class="ico"><use href="#i-flame"></use></svg><svg class="ico"><use href="#i-flame"></use></svg></span>
+              <span>不知道怎么选？做个口味测试 →</span>
+            </div>
+          </div>
+          <div class="page-hero-figure reveal reveal-delay-1">
+            <div class="photo-collage food-hero-collage">
+              <img src="assets/images/site/food-hotpot.jpg" alt="重庆九宫格火锅" fetchpriority="high">
+              <img src="assets/images/site/food-xiaomian.jpg" alt="重庆小面">
+              <img src="assets/images/site/food-bingfen.jpg" alt="冰粉凉虾">
+              <div class="collage-stamp" style="background:var(--rust)"><div><strong>寻味</strong><span>TASTE THE CITY</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="listing-section">
+      <div class="container">
+        <div class="food-taste-bridge reveal">
+          <div>
+            <h3>不想看攻略，想直接知道“我该吃什么”？</h3>
+            <p>8 个关于口味的小问题，测出你的山城味觉人格，并获得一份专属推荐菜单。</p>
+          </div>
+          <a class="btn btn--light" href="taste-test.html">开始口味测试 <svg class="ico"><use href="#i-sparkles"></use></svg></a>
+        </div>
+
+        <div class="filter-panel" aria-label="美食筛选">
+          <div class="filter-top">
+            <label class="search-field" id="listing-search-field">
+              <svg class="ico"><use href="#i-search"></use></svg>
+              <input type="search" id="listing-search" placeholder="搜菜名、口味或关键词…" autocomplete="off" aria-label="搜索美食">
+              <button class="search-clear" type="button" data-search-clear aria-label="清空搜索"><svg class="ico"><use href="#i-close"></use></svg></button>
+            </label>
+            <label class="control-select">
+              <span class="sr-only">排序方式</span>
+              <select id="listing-sort">
+                <option value="popular">人气优先</option>
+                <option value="rating">评分优先</option>
+                <option value="price">人均从低到高</option>
+                <option value="spice">辣度从高到低</option>
+              </select>
+            </label>
+            <div class="view-toggle" role="group" aria-label="切换排列方式">
+              <button type="button" class="is-active" data-view="grid" aria-label="网格排列"><svg class="ico"><use href="#i-grid"></use></svg></button>
+              <button type="button" data-view="list" aria-label="列表排列"><svg class="ico"><use href="#i-list"></use></svg></button>
+            </div>
+          </div>
+          <div class="filter-bottom">
+            <div class="filter-chips" id="category-chips" role="group" aria-label="按类型筛选"></div>
+            <div class="filter-extra">
+              <label class="control-select">
+                <span class="sr-only">按辣度筛选</span>
+                <select id="spice-select">
+                  <option value="">全部辣度</option>
+                  <option value="1">微辣 · 1 级</option>
+                  <option value="2">轻辣 · 2 级</option>
+                  <option value="3">中辣 · 3 级</option>
+                  <option value="4">重辣 · 4 级</option>
+                  <option value="5">爆辣 · 5 级</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-result-bar">
+          <span><strong data-result-count>12</strong>道风味 <span data-filter-context>· 从早餐到夜宵</span></span>
+          <span class="hint"><svg class="ico"><use href="#i-heart"></use></svg>收藏你想吃的，进论坛问本地人</span>
+        </div>
+
+        <div class="listing-grid" id="listing-grid" aria-live="polite"></div>
+        <div class="load-more-wrap" id="load-more-wrap">
+          <button class="load-more-btn" type="button" data-load-more>加载更多风味 <svg class="ico"><use href="#i-arrow-down"></use></svg></button>
+        </div>
+
+        <div class="listing-note">
+          <p><strong>山城的味道，从来不只在碗里。</strong><br>每一道菜都有自己的论坛，哪家店不踩雷、怎么点才地道，去问每天都在吃的人。</p>
+          <a class="btn btn--sm" href="forums.html?type=food">逛逛美食论坛 <svg class="ico"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/listing.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="重庆景点推荐：洪崖洞、磁器口、李子坝、武隆天生三桥、长江索道……按夜景、人文、自然筛选，查看门票、开放时间与专属论坛。">
+  <meta name="theme-color" content="#173f35">
+  <title>寻景 · 山城十二景 | 山城游食录</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="attractions" data-nav="attractions">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div data-site-header></div>
+
+  <main id="main" class="page">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero--split">
+          <div class="reveal">
+            <nav class="breadcrumb" aria-label="面包屑"><a href="index.html">首页</a><svg class="ico"><use href="#i-chevron-right"></use></svg><span class="current">寻景</span></nav>
+            <p class="eyebrow">01 · Sights / 山城寻景</p>
+            <h1>山城十二景，<br>各有各的<em>入口。</em></h1>
+            <p class="lede">有的景在崖壁上，有的在轻轨里，有的在离主城两小时的天坑深处。按你喜欢的旅行方式，挑一处作为山城故事的开始。</p>
+            <div class="page-hero-meta">
+              <span><svg class="ico"><use href="#i-map-pin"></use></svg>12 个目的地</span>
+              <span><svg class="ico"><use href="#i-compass"></use></svg>5 个区域</span>
+              <span><svg class="ico"><use href="#i-message"></use></svg>每个景点都有独立论坛</span>
+            </div>
+            <div class="page-hero-stats">
+              <div class="page-hero-stat"><strong>12</strong><span>精选景点 · Sights</span></div>
+              <div class="page-hero-stat"><strong>4</strong><span>种旅行性格 · Moods</span></div>
+              <div class="page-hero-stat"><strong>24h</strong><span>随时进入论坛 · Forum</span></div>
+            </div>
+          </div>
+          <div class="page-hero-figure reveal reveal-delay-1">
+            <div class="photo-collage">
+              <img src="assets/images/site/hongya.jpg" alt="洪崖洞夜景" fetchpriority="high">
+              <img src="assets/images/site/liziba.jpg" alt="李子坝轻轨穿楼">
+              <img src="assets/images/site/ciqikou-3.jpg" alt="磁器口古镇">
+              <div class="collage-stamp"><div><strong>寻景</strong><span>FIND YOUR VIEW</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="listing-section">
+      <div class="container">
+        <div class="filter-panel" aria-label="景点筛选">
+          <div class="filter-top">
+            <label class="search-field" id="listing-search-field">
+              <svg class="ico"><use href="#i-search"></use></svg>
+              <input type="search" id="listing-search" placeholder="搜景点、区域或关键词…" autocomplete="off" aria-label="搜索景点">
+              <button class="search-clear" type="button" data-search-clear aria-label="清空搜索"><svg class="ico"><use href="#i-close"></use></svg></button>
+            </label>
+            <label class="control-select">
+              <span class="sr-only">排序方式</span>
+              <select id="listing-sort">
+                <option value="popular">人气优先</option>
+                <option value="rating">评分优先</option>
+                <option value="price">门票从低到高</option>
+                <option value="name">按名称浏览</option>
+              </select>
+            </label>
+            <div class="view-toggle" role="group" aria-label="切换排列方式">
+              <button type="button" class="is-active" data-view="grid" aria-label="网格排列"><svg class="ico"><use href="#i-grid"></use></svg></button>
+              <button type="button" data-view="list" aria-label="列表排列"><svg class="ico"><use href="#i-list"></use></svg></button>
+            </div>
+          </div>
+          <div class="filter-bottom">
+            <div class="filter-chips" id="category-chips" role="group" aria-label="按类型筛选"></div>
+            <div class="filter-extra">
+              <label class="control-select">
+                <span class="sr-only">按区域筛选</span>
+                <select id="district-select">
+                  <option value="">全部区域</option>
+                </select>
+              </label>
+              <label class="free-toggle">
+                <input type="checkbox" id="free-only">
+                <span class="toggle-track"></span>
+                只看免费
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-result-bar">
+          <span><strong data-result-count>12</strong>处目的地 <span data-filter-context>· 全城漫游</span></span>
+          <span class="hint"><svg class="ico"><use href="#i-heart"></use></svg>点击爱心收藏，进入论坛聊细节</span>
+        </div>
+
+        <div class="listing-grid" id="listing-grid" aria-live="polite"></div>
+        <div class="load-more-wrap" id="load-more-wrap">
+          <button class="load-more-btn" type="button" data-load-more>加载更多目的地 <svg class="ico"><use href="#i-arrow-down"></use></svg></button>
+        </div>
+
+        <div class="listing-note">
+          <p><strong>不知道该从哪开始？</strong><br>把想去的景点丢进路线生成器，让我们替你排一条不绕路的山城行程。</p>
+          <a class="btn btn--sm" href="routes.html">试试智能路线 <svg class="ico"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/listing.js"></script>
+</body>
+</html>
